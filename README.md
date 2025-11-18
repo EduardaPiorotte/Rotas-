@@ -5,44 +5,42 @@ O objetivo é construir uma aplicação **Web com React + Vite** e uma aplicaç�
 
 ---
 
-# 📦 Estrutura do Repositório
+## 📦 Estrutura do Repositório
 
+```bash
 meu-estudo-caso/
-├─ web/ → Projeto React + Vite (listagem + detalhes)
+├─ web/    → Projeto React + Vite (listagem + detalhes)
 └─ mobile/ → Projeto React Native + Expo (listagem + detalhes)
+🌐 Parte Web (React + Vite)
+Tecnologias utilizadas
+React
 
-yaml
-Copiar código
+Vite
 
----
+Axios
 
-# 🌐 Parte Web (React + Vite)
+React Router DOM
 
-### Tecnologias utilizadas
-- React
-- Vite
-- Axios
-- React Router DOM
-- React Bootstrap
+React Bootstrap
 
-### 📡 API Consumida
+📡 API Consumida
 Endpoint base:
-https://proweb.leoproti.com.br/api/v1/product
 
-bash
+text
 Copiar código
-
+https://proweb.leoproti.com.br/api/v1/product
 Swagger:
+
 https://proweb.leoproti.com.br/swagger-ui/index.html
 
-### 🔀 Rotas da Aplicação
-| Rota | Função |
-|------|--------|
-| `/` | Lista todos os produtos |
-| `/product/:id` | Detalhes do produto selecionado |
+🔀 Rotas da Aplicação
+Rota	Função
+/	Lista todos os produtos
+/product/:id	Detalhes do produto selecionado
 
-### ▶️ Executar localmente
-```bash
+▶️ Executar localmente (Web)
+bash
+Copiar código
 cd web
 npm install
 npm run dev
@@ -59,9 +57,9 @@ Axios
 🔀 Telas da Aplicação
 Tela	Função
 Home	Lista os produtos da API
-Details	Exibe os detalhes do produto selecionado
+Details	Exibe os detalhes do produto
 
-▶️ Executar localmente
+▶️ Executar localmente (Mobile)
 bash
 Copiar código
 cd mobile
@@ -78,7 +76,7 @@ Clone o repositório:
 bash
 Copiar código
 git clone https://github.com/EduardaPiorotte/Rotas-.git
-Acesse as pastas e execute cada projeto conforme explicado acima:
+Acesse as pastas e execute cada projeto:
 
 Para Web → pasta /web
 
