@@ -1,88 +1,101 @@
-# 🚀 Estudo de Caso: Rotas em Aplicações Web e Mobile
+# 🛍️ Estudo de Caso — Rotas e Consumo de API (Web + Mobile)
 
-Este projeto é um estudo de caso prático que visa consolidar o conhecimento sobre a implementação de rotas e navegação em diferentes plataformas, simulando uma aplicação de listagem e detalhes de produtos.
-
-O projeto está dividido em dois diretórios principais:
-1.  **`web/`**: Aplicação front-end desenvolvida com React e Vite.
-2.  **`mobile/`**: Aplicação móvel desenvolvida com React Native e Expo.
+Este projeto foi desenvolvido para as atividades práticas de Rotas (Prática 08) e Desenvolvimento Profissional (Prática 09).  
+O objetivo é construir uma aplicação **Web com React + Vite** e uma aplicação **Mobile com React Native + Expo**, ambas consumindo uma API real de produtos.
 
 ---
 
-## ⚙️ 1. Instalação e Execução
+# 📦 Estrutura do Repositório
 
-Para rodar o projeto localmente, siga os passos abaixo para as duas plataformas:
+meu-estudo-caso/
+├─ web/ → Projeto React + Vite (listagem + detalhes)
+└─ mobile/ → Projeto React Native + Expo (listagem + detalhes)
 
-### Pré-requisitos
-* Node.js (versão LTS recomendada)
-* npm (ou yarn)
-* Expo Go app instalado no seu smartphone (para testar o mobile)
-
-### 1.1. Aplicação Web (React + Vite)
-
-A aplicação Web utiliza o **React Router DOM** para navegação.
-
-1.  **Navegue para o diretório Web:**
-    ```bash
-    cd web
-    ```
-2.  **Instale as dependências:**
-    ```bash
-    npm install
-    ```
-3.  **Inicie o servidor de desenvolvimento:**
-    ```bash
-    npm run dev
-    ```
-    O aplicativo estará acessível em `http://localhost:8081`.
-
-### 1.2. Aplicação Mobile (React Native + Expo)
-
-A aplicação Mobile utiliza o **React Navigation** (Stack Navigator) para navegação.
-
-1.  **Navegue para o diretório Mobile:**
-    ```bash
-    cd mobile
-    ```
-2.  **Instale as dependências:**
-    ```bash
-    npm install
-    # Garanta que as dependências nativas estão instaladas:
-    npx expo install react-native-screens react-native-safe-area-context react-native-gesture-handler react-native-reanimated
-    ```
-3.  **Inicie o servidor Expo:**
-    ```bash
-    npx expo start --tunnel
-    ```
-4.  **Acesse o App:** Use o aplicativo **Expo Go** no seu celular para escanear o QR Code exibido no terminal (ou use o link `exp://` diretamente no navegador do seu celular).
+yaml
+Copiar código
 
 ---
 
-## 🗺️ 2. Explicação das Rotas Implementadas
+# 🌐 Parte Web (React + Vite)
 
-### 2.1. Web (`web/` - React Router DOM)
+### Tecnologias utilizadas
+- React
+- Vite
+- Axios
+- React Router DOM
+- React Bootstrap
 
-| Rota | Componente | Descrição |
-| :--- | :--- | :--- |
-| **`/`** | `Home.jsx` | Página inicial que exibe a lista completa de produtos e links de detalhes. |
-| **`/product/:id`** | `ProductDetail.jsx` | Página de detalhes. O parâmetro `:id` é capturado via `useParams()` para buscar (simular) os dados do produto específico. |
+### 📡 API Consumida
+Endpoint base:
+https://proweb.leoproti.com.br/api/v1/product
 
-### 2.2. Mobile (`mobile/` - React Navigation Stack)
+bash
+Copiar código
 
-| Rota (Screen Name) | Componente | Descrição |
-| :--- | :--- | :--- |
-| **`Home`** | `HomeScreen.js` | Tela principal que contém botões de navegação para os produtos. Passa o `productId` e `productName` como parâmetros. |
-| **`Details`** | `DetailsScreen.js` | Tela de detalhes. Recebe os parâmetros do produto através de `route.params` para exibir as informações. |
+Swagger:
+https://proweb.leoproti.com.br/swagger-ui/index.html
 
----
+### 🔀 Rotas da Aplicação
+| Rota | Função |
+|------|--------|
+| `/` | Lista todos os produtos |
+| `/product/:id` | Detalhes do produto selecionado |
 
-## 💡 3. Organização do Projeto
+### ▶️ Executar localmente
+```bash
+cd web
+npm install
+npm run dev
+📱 Parte Mobile (React Native + Expo)
+Tecnologias utilizadas
+React Native
 
-* **`web/src/pages`**: Contém todos os componentes que representam páginas ou rotas inteiras.
-* **`mobile/screens`**: Contém todos os componentes que representam telas inteiras para a navegação mobile.
+Expo
 
----
+React Navigation (Stack)
 
-## 📚 4. Créditos e Referências
+Axios
 
-* Criado como um estudo de caso para consolidação de conceitos de navegação Web e Mobile.
-* Frameworks utilizados: React, Vite, React Native, Expo, React Router DOM, React Navigation.
+🔀 Telas da Aplicação
+Tela	Função
+Home	Lista os produtos da API
+Details	Exibe os detalhes do produto selecionado
+
+▶️ Executar localmente
+bash
+Copiar código
+cd mobile
+npm install
+npx expo start
+🚀 Deploy no Vercel
+A aplicação Web está publicada e acessível pelo link:
+
+🔗 https://rotas-l6lmq6l2j-eduarda-gomes-projects-e293d0a8.vercel.app
+
+📚 Como rodar o projeto completo
+Clone o repositório:
+
+bash
+Copiar código
+git clone https://github.com/EduardaPiorotte/Rotas-.git
+Acesse as pastas e execute cada projeto conforme explicado acima:
+
+Para Web → pasta /web
+
+Para Mobile → pasta /mobile
+
+🧩 Objetivo Pedagógico
+O estudo de caso demonstra:
+
+Navegação com React Router e React Navigation
+
+Consumo de API REST usando Axios
+
+Organização de pastas em projetos reais
+
+Deploy profissional com Vercel
+
+Desenvolvimento Web + Mobile integrado
+
+👩‍💻 Autora
+Projeto desenvolvido por Eduarda Piorotte para fins acadêmicos.
